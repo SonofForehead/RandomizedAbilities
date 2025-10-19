@@ -2,8 +2,9 @@
 using BoneLib;
 using BoneLib.BoneMenu;
 using UnityEngine;
+using RandomPowerEveryLevelLoad.Abilities;
 
-[assembly: MelonInfo(typeof(RandomPowerEveryLevelLoad.Core), "RandomPowerEveryLevelLoad", "1.0.0", "SonofForehead", null)]
+[assembly: MelonInfo(typeof(RandomPowerEveryLevelLoad.Core), "RandomizedAbilities", "1.0.0", "SonofForehead", null)]
 [assembly: MelonGame("Stress Level Zero", "BONELAB")]
 
 namespace RandomPowerEveryLevelLoad
@@ -17,15 +18,24 @@ namespace RandomPowerEveryLevelLoad
 
         // Shitty toggles for bone menu
         public static bool toggleDblJump;
-        public static void DblJumpToggle(bool toggle) { toggleDblJump = toggle; }
         public static bool toggleImmortal;
-        public static void ImmortalToggle(bool toggle) { toggleImmortal = toggle; }
         public static bool toggleMoon;
-        public static void MoonToggle(bool toggle) { toggleMoon = toggle; }
 
         public override void OnInitializeMelon()
         {
-            CreateBonemenu();
+            //CreateBonemenu();
+        }
+
+        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
+        {
+            if (toggleMod)
+            {
+                //Randomize.TheChosening();
+
+                //Powers.DoubleJump(toggleDblJump);
+                //Powers.Immortal(toggleImmortal);
+                //Powers.MoonGravity(toggleMoon);
+            }
         }
 
         public static void CreateBonemenu()
@@ -42,15 +52,15 @@ namespace RandomPowerEveryLevelLoad
 
             Page dblJumpPage = powersPage.CreatePage("Double Jump", Color.white);
             // Root/MainPage/Powers/DoubleJump
-            dblJumpPage.CreateBool("Toggle", Color.white, true,DblJumpToggle);
+            dblJumpPage.CreateBool("Toggle", Color.white, true, Abilities.Powers.DoubleJump);
 
             Page immortalPage = powersPage.CreatePage("Immortality", Color.white);
             //Root/MainPage/Powers/Immortality
-            immortalPage.CreateBool("Toggle", Color.white, true, ImmortalToggle);
+            immortalPage.CreateBool("Toggle", Color.white, true, Abilities.Powers.Immortal);
 
             Page moonPage = powersPage.CreatePage("Moon Gravity", Color.white);
             //Root/MainPage/Powers/MoonGravity
-            moonPage.CreateBool("Toggle", Color.white, true, MoonToggle);
+            moonPage.CreateBool("Toggle", Color.white, true, Abilities.Powers.MoonGravity);
         }
     }
 }

@@ -547,6 +547,9 @@
 
 	<ItemGroup>
 		<Compile Include="Core.cs" />
+		<Compile Include="Powers\CursedPowers.cs" />
+		<Compile Include="Powers\Powers.cs" />
+		<Compile Include="Powers\Randomize.cs" />
 	</ItemGroup>
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
