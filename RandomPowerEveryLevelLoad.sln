@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomPowerEveryLevelLoad", "RandomPowerEveryLevelLoad.csproj", "{A843A81D-A390-4C0B-B9B4-1715C4D8DFBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A843A81D-A390-4C0B-B9B4-1715C4D8DFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A843A81D-A390-4C0B-B9B4-1715C4D8DFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A843A81D-A390-4C0B-B9B4-1715C4D8DFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A843A81D-A390-4C0B-B9B4-1715C4D8DFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58A8D38F-77B9-4F50-9893-2DCE3CC5A521}
+	EndGlobalSection
+EndGlobal
